@@ -23,9 +23,9 @@ app.use(jsonServer.bodyParser);
 app.use("/api", (req, resp, next) => router(req, resp, next));
 
 chokidar.watch(fileName).on("change", () => {
-    console.log("Reloadig web service data...");
+    console.log("Reloading web service data...");
     createServer();
     console.log("Reloading web service data complete.");
 });
 
-app.listen(port, () => console.log("Web service running on port ${port}"));
+app.listen(port, () => console.log(`Web service running on port ${port}`));
