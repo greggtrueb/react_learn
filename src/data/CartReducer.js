@@ -1,7 +1,7 @@
 import { ActionTypes } from "./Types"
 
 export const CartReducer = (storeData, action) => {
-    let newStore = { cart: [], cartItem: 0, cartPrice: 0, ...storeData }
+    let newStore = { cart: [], cartItems: 0, cartPrice: 0, ...storeData }
     // eslint-disable-next-line default-case
     switch(action.type){
         case ActionTypes.CART_ADD:

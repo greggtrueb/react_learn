@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { loadData } from "../data/ActionCreators.js"
+import { loadData } from "../data/ActionCreators.js";
 import { DataTypes } from "../data/Types.js";
 import { Shop } from "./Shop";
+import { addToCart, updateCartQuantity, removeFromCart, clearCart }  from "../data/CartActionCreators";
 
 const mapStateToProps = (dataStore) => ({
     ...dataStore
 })
 
 const mapDispatchToProps = {
-    loadData
+    loadData, addToCart, updateCartQuantity, removeFromCart, clearCart
 }
 
 const filterProducts = (products = [], category) =>  (!category || category === "All")

@@ -7,7 +7,8 @@ export class ProductList extends Component {
             return <h5 className ="p-2">No Products</h5>
         }
         return this.props.products.map(p =>
-            <Product product={ p }/>
+            <Product product={ p } addToCart={ this.props.addToCart }/>
         )
+        
     }
 }

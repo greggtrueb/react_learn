@@ -11,6 +11,9 @@ export class Product extends Component {
             </h4>
             <div className="card-text bg-white p-1">
                 { this.props.product.description }
+                <button className="btn btn-success btn-sm float-right" onClick= { () => this.props.addToCart(this.props.product) } >
+                    Add To Cart
+                </button>
             </div>
         </div>
     }
